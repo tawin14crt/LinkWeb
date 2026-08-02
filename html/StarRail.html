@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/output.css" rel="stylesheet">
+    <title>Chaoszero</title>
+</head>
+<body class="bg-slate-800 text-white min-h-screen flex flex-col">
+
+    <div class="flex-1">
+        <!--                   Navbar                   -->
+        <div class="bg-gray-900">
+            <div class="flex flex-row items-center justify-between px-10">
+                <div class="font-bold text-2xl text-indigo-400 p-6 hover:text-indigo-300 hover:scale-105 transition duration-300 ease-in-out transform">
+                    <a href="../index.html">😭 Home</a>
+                </div>
+
+                <div class="flex flex-row items-center justify-center font-bold text-2xl text-indigo-400 p-6 hover:text-indigo-300 hover:scale-105 transition duration-300 ease-in-out transform">
+                    <img src="../image/Sticker_PPG_01_March_7th_07.webp" alt="Chaos Zero" class="mr-2 w-15 h-15">
+                    <a href="https://hsr.hoyoverse.com/en-us/home" target="_blank" rel="noopener noreferrer">
+                        Honkai Star Rail
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--                   Content                     -->
+        <div class="bg-slate-800">
+            <div class="flex flex-col sm:flex-row items-center justify-center p-6 gap-6">
+
+                <div onclick="openModal('../image/DDDSpeed.png')" class="cursor-pointer flex flex-col items-center justify-center bg-blue-900 hover:bg-blue-800 shadow-lg shadow-black/40 text-white font-bold py-4 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105">
+                    <img src="../image/DDDSpeed.png" alt="ก็แค่รูป" class="shadow-lg w-64 h-54 sm:w-72 md:w-80 object-cover rounded">
+                    <p class="p-4 font-bold text-2xl text-center">รูปที่กดเพื่อดู</p>
+                </div>
+
+                <div onclick="openModal('../image/Def%.png')" class="cursor-pointer flex flex-col items-center justify-center bg-blue-900 hover:bg-blue-800 shadow-lg shadow-black/40 text-white font-bold py-4 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105">
+                    <img src="../image/Def%.png" alt="ก็แค่รูป" class="shadow-lg w-64 h-54 sm:w-72 md:w-80 object-cover rounded">
+                    <p class="p-4 font-bold text-2xl text-center">รูปที่กดเพื่อดู</p>
+                </div>
+
+                <a href="https://game8.co/games/Honkai-Star-Rail" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center bg-blue-900 hover:bg-blue-800 shadow-lg shadow-black/40 text-white font-bold py-4 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105">
+                    <img src="../image/HSRGaem8.png" alt="Chaos Zero" class="shadow-lg w-64 h-54 sm:w-72 md:w-80 object-cover rounded">
+                    <p class="p-4 font-bold text-2xl text-center">Game8</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 pt-4">
+        <div class="flex items-center justify-between px-3">
+            <div class="flex justify-center p-6 flex-row sm:flex-col gap-2">
+                <p>It's Me XD</p>
+                <p>If you have any questions, feel free to ask!</p>
+                <p>© 2026 Mikazaki. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="https://discord.com/users/478405415286210601" target="_blank" rel="noopener noreferrer" class="flex hover:text-indigo-300 hover:scale-105 items-center justify-center font-bold text-2xl text-indigo-400 p-6 transition duration-300 ease-in-out transform">
+                    Discord <img src="../image/discord-logo-discord-icon-transparent-free-png.webp" alt="Discord Logo" class="mt-1 mx-2 w-8 h-8">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Full size" class="max-w-[90vw] max-h-[90vh] object-contain rounded shadow-2xl">
+        <button onclick="closeModal()" class="absolute top-4 right-6 text-white text-4xl font-bold hover:text-gray-300">&times;</button>
+    </div>
+
+    <!-- Modal Script Open/Close-->
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+
+</body>
+</html>
